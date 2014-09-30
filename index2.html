@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="myFlickr">
+<head>
+<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script type="text/javascript" src="js/angular.min.js"></script>
+	<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false"></script>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/Angular.css">
+	<link rel="stylesheet" type="text/css" href="css/responsiveness.css">
+	</head>
+<body ng-controller="mainController" >
+	<div id="overlay" ng-show="showOverlay" ng-click="overlayClicked()">
+			<div id="mapper">	
+			</div>
+			<div id="mapSlide" class="mapS">
+				<div id="mapSlideData">
+						<p>Search Word :{{ SearchTerm}}</br>Image title :{{ searchTitle}}
+        		</br>Latitude:{{ lat}}</br>Longitude:{{ lng}}</p>	
+				</div>
+				<img ng-src="{{imageSrc}}">
+			</div>
+			<div id="nextImage">
+			<div id="preview"></div>
+		</div>
+	</div><!-- overlay -->
+	<header>
+		<div id="nav">
+		<form>
+			{{4*6}}
+			<input id="inputField" type='text' ng-model='SearchTerm' placeholder='Type in your search'>
+			<input id="searchBtn" type='submit' ng-click='searchBtn()' value='Search'>
+		</form>
+		</div>
+	</header>
+	<section>
+		<div id='recentContainer'>
+			<p>Recent Photos</p>
+		<div class='recentPhoto' >
+			
+			<div ng-repeat="photo in recent">
+			<img ng-src="{{'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg'}}">
+			</div>																									
+		</div>
+		</div>
+		<div id='intrestingContainer'>
+			<p>Interesting Photos</p>
+		<div class='interestingPhoto' >
+			
+			<!-- di should house the interseing photos -->
+			<div ng-repeat="photo in interesting">
+			<img ng-src="{{'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg'}}">
+			</div>
+		</div>
+		</div>
+		<div id="jTscrollerContainer" ng-show="showSearch">
+			<p>Showing Results for Searched Photos</p>
+		<div class='searchPhoto'>
+			<div>
+				<ul>
+					<li ng-repeat='photo in search' >
+						<img ng-src="{{'https://farm'+photo.farm+'.staticflickr.com/'+photo.server+'/'+photo.id+'_'+photo.secret+'.jpg'}}" ng-click="imageClicked(photo)">
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+	</section>
+	<footer>
+		<p>Durotola | Iyanu Tomiwa &copy 2014</p>
+	</footer>
+	<script type="text/javascript" src='js/Angular.js'></script>
+
+</body>
+</html>

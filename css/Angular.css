@@ -1,0 +1,243 @@
+/********************************
+HEADER,INPUT AND BUTTON
+*******************************/
+
+header {
+	width: 100%;
+	background-color: rgba(0,0,0,.7);
+	height: 60px;
+	margin:0 auto;
+	position: fixed;
+	top: 0;
+	display: block;
+}
+header #nav {
+	float: right;
+	margin-top: 0px;
+}
+body 
+{
+	background:#f4f4f4 url(../img/bkg-4.png) no-repeat;
+	background-size: cover;
+}
+#nav,
+#path
+ {
+
+	width: 50%;
+	height: 60px;
+	background-color: rgba(0,0,0,.3);
+	margin-top: 1%;
+	margin-left: auto;
+	margin-right: auto;
+
+}
+#searchBtn {
+	/*border:1px solid rgba(255,255,255,.5);*/
+	background-color:#0080C0; 
+	border:0px;
+	margin-top: 10px;
+	font-family: sans-serif;
+	color:#fff;
+	height:  40px;
+ 	width: 20%;
+ 	float: left;
+ 	margin-left: 1%;
+ 	padding: 0px 0px 0px 0px;
+ 	transition-duration: 200ms;
+ }
+#searchBtn:hover {
+	background-color:#1180FF;
+}
+ input[type=text] {
+ 	float: left;
+ 	margin-left: 2%;
+ 	height: 40px;
+ 	width: 70%;
+ 	margin-top: 10px;
+ 	background: url(../img/findIcon.png) no-repeat right;
+ 	background-color: rgba(204,204,204,.2);
+ 	border:0px;
+ 	font-size: 24px;
+ 	color: white;
+ 	font-family: Eras Medium ITC,candara;
+
+
+ }
+ input[type=text]:hover,
+ input[type=text]:focus {
+ 	background-color: rgba(220,220,220,.4);
+ }
+
+ input[type=text]:focus {
+ 	border-color: #6BB3CB;
+ }
+
+
+ /********************************
+	RECENT AND INTRESTING PHOTO
+  *******************************/
+.recentPhoto,
+.interestingPhoto {
+	margin-top: 2%;
+	width: 90%;
+	height: 167px;
+	margin-left: 5%;
+	background-color: rgba(0,0,0,.5);
+	overflow-y:hidden;
+	white-space: nowrap;
+}
+
+.recentPhoto div img,
+.interestingPhoto div img {
+	height: 144px;
+}
+.recentPhoto div,	
+.interestingPhoto div 
+{
+	display: inline-block;
+	margin: 3px;
+}
+
+#recentContainer p ,
+#intrestingContainer p,
+#jTscrollerContainer p
+
+{
+	width: 50%;
+	padding-left: 10px;
+	color: #141114;
+	margin-left: 5%;
+	text-decoration: none;
+	font-family: Eras Medium ITC,candara;
+	font-weight: 200;
+	font-size: 24px;
+	padding-bottom: 3px;
+	border-left:4px solid tomato;
+}
+#recentContainer
+ {
+	margin-top: 10%;
+}
+#intrestingContainer,
+#jTscrollerContainer  {
+	margin-top: 1%;
+}
+#overlay
+{
+width: 80%;
+height:100%;
+position:absolute;
+z-index: 24;
+top:10%;
+left:0;
+background: rgba(0,0,0,0.8);
+padding:2% 10% 5% 10%;
+position: fixed;
+}
+#mapper
+{
+margin-top: 5%;
+width: 60%;
+height: 60%;
+background-color:rgba(0,0,0,.3);
+display: inline-block;
+float: left;
+margin-left: 1%;
+z-index: 20;
+}
+/*************************************
+		SEARCH
+*************************************/
+.searchPhoto>div>ul>li 
+{
+	display: inline-block;
+	padding:4px;
+	background-color: rgba(0,0,0,0.7);
+	height: 25%;
+}
+.searchPhoto>div>ul>li img 
+{
+	height: 140px;
+	width: 140px;
+	text-align: center;
+}
+.searchPhoto {
+	margin-top: 1%;
+	max-width: 78.8%;
+	background-color: rgba(255,255,255,.5);
+	margin-left: auto;
+	margin-right: auto;
+}
+/*************************************
+		MAPSLIDE
+*************************************/
+
+#hint,
+#mapSlide
+{
+-webkit-transition-duration: 300ms;
+-moz-transition-duration: 300ms;
+-o-transition-duration: 300ms;
+-ms-transition-duration: 300ms;
+transition-duration: 300ms;
+}
+#mapSlideData p 
+{
+	color:white;
+	width: 80%;
+	font-family: Eras Medium ITC,candara;
+	overflow: hidden;
+	overflow-x:auto;
+	font-size: 15px; 
+}
+#mapSlideData 
+{
+	margin-top: 20%;
+	height: 160px;
+	width: 80%; 
+	overflow-y:auto;
+	overflow-x:hidden;
+	text-overflow: ellipsis;
+	margin-left: 25%;	
+}
+#mapSlide>img {
+	height: 28%;
+	width: 70%;
+	margin-left: 20%;
+	float: left;
+}
+
+#mapSlide {
+	width: 30%;
+    height: 60%;
+    background-color: rgba(0,0,0,.2);
+    background: url(../img/more.png) no-repeat 104% 0px rgba(0,0,0,.4);
+    float:left;
+    position: relative;
+    left:-27%;
+    margin-top: 5%;
+    border-right: 2px solid tomato;
+}
+#mapSlide:hover {
+	left:-5%;
+	background: url(../img/less.png) no-repeat 22% 0px rgba(0,0,0,.4);
+	background-color: rgba(0,0,0,.7);
+}
+/********************************
+			FOOTER
+********************************/
+footer {
+	bottom: 0;
+	width: 100%;
+	height: 60px;
+	background-color: rgba(4,4,4,.7);
+	position: fixed;
+
+}
+footer p{
+	color: steelblue;
+	margin-left: 40%;
+	margin-right: 40%;
+
+}
