@@ -231,13 +231,12 @@ footer {
 	bottom: 0;
 	width: 100%;
 	height: 60px;
+	margin-top: 20%;
 	background-color: rgba(4,4,4,.7);
-	position: fixed;
-
+	text-align: center;
+	color: steelblue;
 }
 footer p{
-	color: steelblue;
-	margin-left: 40%;
-	margin-right: 40%;
-
+	
+	padding-top: 20px;
 }
